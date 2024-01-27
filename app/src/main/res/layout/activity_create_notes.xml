@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/createNotesFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingStart="@dimen/_10sdp">
+
+
+                    <EditText
+                        android:id="@+id/edt_note_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/edit_text_shape"
+                        android:fontFamily="@font/bold"
+                        android:hint="Title"
+                        android:padding="@dimen/_16sdp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                         />
+
+                    <EditText
+                        android:id="@+id/edt_note_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_350sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:background="@drawable/edit_text_shape"
+                        android:fontFamily="@font/regular"
+                        android:gravity="top"
+                        android:hint="note details.."
+                        android:overScrollMode="always"
+                        android:fadeScrollbars="false"
+                        android:padding="@dimen/_15sdp"
+                        android:scrollbarStyle="insideInset"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/white"
+                        />
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnCreateNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_25sdp"
+        android:backgroundTint="@color/red_color"
+        android:clickable="true"
+        android:foregroundTint="@color/white"
+        android:src="@drawable/ic_yes"
+        android:tint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="644dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
